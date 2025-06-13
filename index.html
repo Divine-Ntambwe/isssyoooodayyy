@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="styles.css">
     <title>It's your dayyyy</title>
+    <script>
+        function display(){
+        if (new Date() < new Date("2025-06-14")) {
+         const heartImg = document.getElementById("heart-img");
+         const splashContainer = document.getElementById("splash-container")
+         heartImg.style.display = "none"
+         splashContainer.style.display = "none"
+         document.getElementById("body").textContent = "IT'S NOT YOUR BIRTHDAY YET"
+       }
+       
+        }
+      
+    </script>
 </head>
-<body>
+<body id="body" onload="display()">
     
     
     <div id="heart-img">
@@ -26,17 +39,16 @@
      </div>
 
 
-<div id="images">
+     <div id="images">
         <img id="img1" class="images" src="images/WhatsApp Image 2025-06-07 at 21.24.42_d59ba3be.jpg">
         <img id="img2" class="images" src="images/WhatsApp Image 2025-06-07 at 21.24.42_e5885f4e.jpg">
-        <img id="img3" class="images" src="images/WhatsApp Image 2025-06-07 at 21.24.43_9cea3cc9.jpg">
+        <img id="img3" class="images big-image" src="images/WhatsApp Image 2025-06-07 at 21.24.43_9cea3cc9.jpg">
         <img id="img4" class="images" src="images/WhatsApp Image 2025-06-07 at 21.24.43_102c2d64.jpg">
         <img id="img5" class="images"src="images/WhatsApp Image 2025-06-07 at 21.24.42_83d4188f.jpg">
         <img id="img6" class="images"src="images/WhatsApp Image 2025-06-07 at 21.24.41_3e25d98d.jpg">
         <img id="img7" class="images" src="images/WhatsApp Image 2025-06-08 at 20.36.38_6cee12bf.jpg">
         <img id="img8" class="images"src="images/WhatsApp Image 2025-06-08 at 20.36.35_8076152b.jpg">
         <img id="img9" class="images" src="images/WhatsApp Image 2025-06-08 at 20.39.19_3685f7ce.jpg">
-
      </div>
     
     </div>

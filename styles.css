@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Birthstone",cursive;
-
+ overflow: hidden;
 }
 
 body {
@@ -120,8 +120,11 @@ h2 {
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows:25% 25% 25% 25%;
     gap:10px;
+    pointer-events: all;
 
 }
+
+
 
 .images {
 width: 100%;
@@ -132,6 +135,7 @@ animation-duration: 8s;
 visibility: hidden;
 animation-fill-mode: forwards;
 animation-play-state: paused;
+transition: 1s;
 
 }
 
@@ -146,13 +150,16 @@ animation-play-state: paused;
    
 }
 
+#img1:hover, #img6:hover {
+    cursor: pointer;
+}
+
 #img2 {
     animation-delay: 6s;
 }
 
 #img3{
-    grid-row: 2/5;
-    grid-column: 2/4;
+    
     animation-delay: 8s;
 
 }
@@ -165,9 +172,14 @@ animation-play-state: paused;
 }
 
 #img6 {
-    grid-row: 2/4;
+   grid-row: 2/4;
     grid-column: 4;
     animation-delay: 7s;
+}
+
+.big-image {
+ grid-row: 2/5;
+    grid-column: 2/4;
 }
 
 #img7 {
@@ -181,10 +193,45 @@ animation-play-state: paused;
 #img9 {
     animation-delay: 5s;
 }
+@media screen and (max-width: 800px) {
+    #heart-img{
+        display: none;
+    }
+
+    #splash-container {
+        display: none;
+    }
+    body {
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+    }
+    body::after{
+        content: "Please rotate your phone or open on a laptop";
+    }
+}
 
 
 
 
+@media screen and (max-height:600px) {
+h1{
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+#heart-img{
+   height: 90%;
+}
+
+@keyframes birthday-text {
+    0%{font-size: 0px;}
+    100%{font-size: 50px;}
+}
+}
 
 
 
